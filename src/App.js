@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import Registro from './Components/Registro';
+import Barra from './layout/Barra';
+import Barra1 from './layout/Barra1';
+
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div>
+    <center>
+        <h1>
+           Razas Caninas
+        </h1> 
+        <BrowserRouter> 
+                <Routes>
+                <Route path='/' element={<Barra/>}>
+                <Route path='Registro' element={  <Registro/>   }     />
+                </Route>
+                </Routes>
+        </BrowserRouter>
+        <table border= "5px">
+            <tr>
+                <th colspan="1"> Raza</th>
+                <th> Imagen </th>
+                <th colspan="3">  Mas </th>
+            </tr>   
+            <tr>
+                <th colspan="1"> Chihuahua</th>
+                <th> Imagen </th>
+                <th colspan="3"> 
+                
+                </th>
+            </tr>        
+        </table>
+    </center>
     </div>
+    </>
   );
 }
 
